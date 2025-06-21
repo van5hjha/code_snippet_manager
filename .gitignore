@@ -1,0 +1,29 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Django artifacts
+*.sqlite3
+*.log
+*.pot
+*.pyc
+
+# Secret files
+.env
+
+# Editor/IDE settings
+.vscode/
+.idea/
+
+# Docker artifacts
+*.pid
+*.seed
+*.db
+*.sock
+*.pidfile
+.dockerignore
