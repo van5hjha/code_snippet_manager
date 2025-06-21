@@ -1,7 +1,8 @@
-###🧠 Code Snippet Organizer API
+## 🧠 Code Snippet Organizer API
+
 A Django REST API for saving, tagging, searching, and sharing code snippets. This project features user authentication, a robust tagging system, syntax highlighting, and public sharing capabilities. It's built with Django, Django REST Framework (DRF), and Docker.
 
-###🔧 Features
+### 🔧 Features
 🔐 JWT Authentication: Secure user login and registration.
 ✍️ CRUD Operations: Full Create, Read, Update, and Delete functionality for snippets and tags.
 🏷️ Tagging System: User-scoped tags for efficient organization.
@@ -15,18 +16,18 @@ Follow these steps to get the project up and running using Docker:
 
 1. Clone the Repository
 
-Bash`
-git clone https://github.com/<your-username>/code-snippet-manager.git`
+Bash
+```git clone https://github.com/<your-username>/code-snippet-manager.git```
 
 cd code-snippet-manager 2. Build the Docker Image
 
-Bash`
-docker build -t new-django .`
+Bash
+`docker build -t new-django .`
 
 3. Run the Container
 
-Bash`
-docker run --publish 8000:8000 new-django`
+Bash
+`docker run --publish 8000:8000 new-django`
 
 Once the container is running, open your browser and navigate to:
 
@@ -37,16 +38,16 @@ If not automatically handled by the Dockerfile, you may need to run database mig
 
 First, find your container ID:
 
-Bash`
-docker ps`
+Bash
+`docker ps`
 
 Then, run the following commands, replacing <container_id> with your actual container ID:
 
-Bash`
-docker exec -it <container_id> python manage.py migrate
+Bash
+`docker exec -it <container_id> python manage.py migrate
 docker exec -it <container_id> python manage.py createsuperuser`
 
-###🔎 API Documentation
+### 🔎 API Documentation
 Access the API documentation at:
 
 Swagger UI: http://localhost:8000/swagger/
@@ -54,10 +55,10 @@ ReDoc (optional): http://localhost:8000/redoc/
 📂 .env (Optional)
 You can pass environment variables to your Docker container using --env flags or by configuring defaults within your Dockerfile:
 
-Bash`
-docker run --env SECRET_KEY=abc123 --env ALLOWED_HOSTS=localhost --publish 8000:8000 new-django`
+Bash
+`docker run --env SECRET_KEY=abc123 --env ALLOWED_HOSTS=localhost --publish 8000:8000 new-django`
 
-###👨‍💻 Stack
+### 👨‍💻 Stack
 Django
 Django REST Framework
 PostgreSQL (optional, for database)
@@ -65,5 +66,5 @@ JWT (SimpleJWT for authentication)
 Swagger (drf-yasg for API documentation)
 Docker
 
-###📄 License
+### 📄 License
 This project is licensed under the MIT License.
